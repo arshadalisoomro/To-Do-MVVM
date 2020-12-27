@@ -28,8 +28,7 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
-            Snackbar.make(it, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
 
 //        view.findViewById<Button>(R.id.button_first).setOnClickListener {

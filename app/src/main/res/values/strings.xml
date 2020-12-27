@@ -11,4 +11,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="add_to_do_fab">Add To-Do FaB</string>
     <string name="no_to_do">No To-Do</string>
+    <string name="title">Title</string>
+    <string name="priority">Priority</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
 </resources>

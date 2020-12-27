@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import pk.team.inlab.app.todo.R
 
 /**
@@ -25,7 +27,11 @@ class AddFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_second).setOnClickListener {
+        val items = listOf("Material", "Design", "Components", "Android")
+        val adapter = ArrayAdapter(requireContext(), R.layout.item_priority_list, items)
+        (view.findViewById<MaterialAutoCompleteTextView>(R.id.tiet_note_priority))?.setAdapter(adapter)
+
+        view.findViewById<Button>(R.id.mbtn_save_todo).setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
     }
