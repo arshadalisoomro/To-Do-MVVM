@@ -1,4 +1,4 @@
-package pk.team.inlab.app.todo
+package pk.team.inlab.app.todo.ui
 
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import pk.team.inlab.app.todo.R
 
 class MainActivity : AppCompatActivity() {
 

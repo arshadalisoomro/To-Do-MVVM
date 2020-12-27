@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="pk.team.inlab.app.todo.FirstFragment"
+        android:name="pk.team.inlab.app.todo.ui.fragments.list.ListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_list">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="pk.team.inlab.app.todo.SecondFragment"
+        android:name="pk.team.inlab.app.todo.ui.fragments.add.AddFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_add">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
