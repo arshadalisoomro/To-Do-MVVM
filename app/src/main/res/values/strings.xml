@@ -15,4 +15,6 @@
     <string name="priority">Priority</string>
     <string name="description">Description</string>
     <string name="save">Save</string>
+    <string name="list_fragment_label">To-Do list</string>
+    <string name="add_fragment_label">Add To-Do</string>
 </resources>

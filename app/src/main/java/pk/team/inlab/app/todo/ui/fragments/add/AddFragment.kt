@@ -32,7 +32,7 @@ class AddFragment : Fragment() {
         (view.findViewById<MaterialAutoCompleteTextView>(R.id.tiet_note_priority))?.setAdapter(adapter)
 
         view.findViewById<Button>(R.id.mbtn_save_todo).setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().navigate(R.id.action_AddFragment_to_ListFragment)
         }
     }
 }
