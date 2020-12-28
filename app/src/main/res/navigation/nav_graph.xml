@@ -13,7 +13,11 @@
 
         <action
             android:id="@+id/action_ListFragment_to_AddFragment"
-            app:destination="@id/AddFragment" />
+            app:destination="@id/AddFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/AddFragment"
@@ -23,6 +27,8 @@
 
         <action
             android:id="@+id/action_AddFragment_to_ListFragment"
-            app:destination="@id/ListFragment" />
+            app:destination="@id/ListFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
     </fragment>
 </navigation>
