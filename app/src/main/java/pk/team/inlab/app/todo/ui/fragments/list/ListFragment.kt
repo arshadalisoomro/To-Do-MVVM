@@ -1,10 +1,8 @@
 package pk.team.inlab.app.todo.ui.fragments.list
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import pk.team.inlab.app.todo.R
@@ -25,12 +23,26 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Show menu in Fragment instead
+        setHasOptionsMenu(true)
+
         view.findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
             findNavController().navigate(R.id.action_ListFragment_to_AddFragment)
         }
 
-//        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_list, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_search -> true
+            R.id.action_priority_high -> true
+            R.id.action_priority_low -> true
+            R.id.action_delete_all -> true
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
