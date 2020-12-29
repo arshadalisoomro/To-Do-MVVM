@@ -1,4 +1,4 @@
-package pk.team.inlab.app.todo.ui.viewmodel
+package pk.team.inlab.app.todo.ui.fragments.add
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -11,17 +11,13 @@ import pk.team.inlab.app.todo.data.ToDoDatabase
 import pk.team.inlab.app.todo.data.model.ToDoData
 import pk.team.inlab.app.todo.data.repository.ToDoRepository
 
-class ToDoViewModel(application: Application): AndroidViewModel(application) {
+class AddViewModel(application: Application): AndroidViewModel(application) {
 
     private val toDoDao = ToDoDatabase.getDatabase(application).toDoDao()
     private val toDoRepository: ToDoRepository
 
-    // get all ToDos
-    private val getAllToDos: LiveData<List<ToDoData>>
-
     init {
         toDoRepository = ToDoRepository(toDoDao)
-        getAllToDos = toDoRepository.getAllFlow.asLiveData()
     }
 
     fun insertToDo(toDoData: ToDoData) {
